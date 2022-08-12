@@ -31,4 +31,5 @@ int builtins_list(data_of_program *data)
 		}
 /*if there is no match return -1 */
 	}
+	return (-1);
 }

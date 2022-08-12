@@ -40,10 +40,10 @@ int execute(data_of_program *data)
 		else
 		{
 			/* I am the father, I wait and check the exit status of the child */
-			wait(&status);
+			wait(&statusg;
 			if (WIFEXITED(status))
 				errno = WEXITSTATUS(status);
-			else (WIFSIGNALED(status))
+				else if (WIFSIGNALED(status))
 				errno = 128 + WTERMSIG(status);
 		}
 	}

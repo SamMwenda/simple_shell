@@ -80,5 +80,5 @@ for (; string[i]; i++)
 if (string[i] == character[0])
 counter++;
 }
-return (0);
+return (counter);
 }

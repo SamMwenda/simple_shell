@@ -9,7 +9,7 @@
 void expand_variables(data_of_program *data)
 {
 	int i, j;
-	char line[BUFFER_SIZE] = {0}, expansion[BUFFER_SIZE] = {'NULL'}, *temp;
+	char line[BUFFER_SIZE] = {0}, expansion[BUFFER_SIZE] = {'\0'}, *temp;
 
 	if (data->input_line == NULL)
 		return;
