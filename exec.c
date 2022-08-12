@@ -11,7 +11,7 @@ int execute(data_of_program *data)
 
 	/* check for program in built ins */
 	retval = builtins_list(data);
-	if (retval != -1) /* if program was found in built ins */
+	if (retval != -1)/* if program was found in built ins */
 		return (retval);
 
 	/* check for program file system */
@@ -24,7 +24,7 @@ int execute(data_of_program *data)
 	{/* if program was found */
 		pidd = fork(); /* create a child process */
 		if (pidd == -1)
-		{/* if the fork call failed */
+		{ /* if the fork call failed */
 			perror(data->command_name);
 			exit(EXIT_FAILURE);
 		}
@@ -36,10 +36,10 @@ int execute(data_of_program *data)
 		}
 		else
 		{/* I am the father, I wait and check the exit status of the child */
-			wait(&statusg;
+			wait(&status);
 			if (WIFEXITED(status))
 				errno = WEXITSTATUS(status);
-				else if (WIFSIGNALED(status))
+			else if (WIFSIGNALED(status))
 				errno = 128 + WTERMSIG(status);
 		}
 	}

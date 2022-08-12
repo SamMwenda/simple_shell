@@ -73,7 +73,7 @@ int builtin_set_env(data_of_program *data)
 /**
  * builtin_unset_env - ..
  * @data: struct for the program's data'
- * Return: zero if sucess.
+ * Return: ..
  */
 int builtin_unset_env(data_of_program *data)
 {
@@ -89,4 +89,4 @@ int builtin_unset_env(data_of_program *data)
 	env_remove_key(data->tokens[1], data);
 
 	return (0);
-
+}
