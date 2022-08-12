@@ -27,11 +27,7 @@ return (0);
  * when the signal SIGINT (ctrl + c) is send to the program
  * @UNUSED: option of the prototype
  */
-void handle_ctrl_c(int opr UNUSED)
-{
-_print("\n");
-_print(PROMPT_MSG);
-}
+
 
 /**
  * inicialize_data - inicialize the struct with the info of the program

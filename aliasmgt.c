@@ -54,10 +54,12 @@ char *get_alias(data_of_program *data, char *name)
 	alias_length = str_length(name);
 
 	for (i = 0; data->alias_list[i]; i++)
-	{/* Iterates through the environ and check for coincidence of the varname */
+	{
+		/* Iterates through the environ and check for coincidence of the varname */
 		if (str_compare(name, data->alias_list[i], alias_length) &&
 			data->alias_list[i][alias_length] == '=')
-		{/* returns the value of the key NAME=  when find it */
+		{
+			/* returns the value of the key NAME=  when find it */
 			return (data->alias_list[i] + alias_length + 1);
 		}
 	}
@@ -85,7 +87,8 @@ int set_alias(char *alias_string, data_of_program *data)
 		if (alias_string[i] != '=')
 			buffer[i] = alias_string[i];
 		else
-		{/* search if the value of the alias is another alias */
+		{
+			/* search if the value of the alias is another alias */
 			temp = get_alias(data, alias_string + i + 1);
 			break;
 		}
@@ -94,19 +97,22 @@ int set_alias(char *alias_string, data_of_program *data)
 	for (j = 0; data->alias_list[j]; j++)
 		if (str_compare(buffer, data->alias_list[j], i) &&
 			data->alias_list[j][i] == '=')
-		{/* if the alias alredy exist */
+		{
+			/* if the alias alredy exist */
 			free(data->alias_list[j]);
 			break;
 		}
 
 	/* add the alias */
 	if (temp)
-	{/* if the alias already exist */
+	{
+		/* if the alias already exist */
 		buffer_add(buffer, "=");
 		buffer_add(buffer, temp);
 		data->alias_list[j] = str_duplicate(buffer);
 	}
-	else /* if the alias does not exist */
+	else
+		/* if the alias does not exist */
 		data->alias_list[j] = str_duplicate(alias_string);
 	return (0);
 }

@@ -46,7 +46,7 @@ _printe(": can't cd to ");
 _printe(data->tokens[1]);
 _printe("\n");
 }
-else if (errorcode == 127)
+else (errorcode == 127)
 {
 _printe(data->program_name);
 _printe(": ");

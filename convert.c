@@ -8,6 +8,7 @@
  *
  * Return: Nothing.
  */
+
 void long_to_string(long number, char *string, int base)
 {
 int index = 0, inNegative = 0;
@@ -79,5 +80,5 @@ for (; string[i]; i++)
 if (string[i] == character[0])
 counter++;
 }
-return (counter);
+return (0);
 }
