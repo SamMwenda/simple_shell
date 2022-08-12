@@ -1,2 +1,2 @@
 # simple_shell
-Coding Simple Shell
+A simple UNIX command interpreter created for ALX School as a partner project.
