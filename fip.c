@@ -28,7 +28,7 @@ int find_program(data_of_program *data)
 
 	if (!directories || !directories[0])
 	{
-	        errno = 127;	
+		errno = 127;
 		return (127);
 	}
 	for (i = 0; directories[i]; i++)
